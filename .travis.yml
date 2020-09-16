@@ -13,7 +13,7 @@ after-success:
     - docker build -t nhukangasniemi/nulti-nginx ./nginx
     - docker build -t nhukangasniemi/multi-server ./server
     - docker build -t nhukangasniemi/multi-worker ./worker
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin docker.io
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin docker.io
     - docker push nhukangasniemi/multi-client
     - docker push nhukangasniemi/multi-nginx
     - docker push nhukangasniemi/multi-server
