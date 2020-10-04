@@ -10,7 +10,7 @@ script:
 
 after-success:
     - docker build -t nhukangasniemi/multi-client ./client
-    - docker build -t nhukangasniemi/nulti-nginx ./nginx
+    - docker build -t nhukangasniemi/multi-nginx ./nginx
     - docker build -t nhukangasniemi/multi-server ./server
     - docker build -t nhukangasniemi/multi-worker ./worker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin docker.io
