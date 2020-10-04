@@ -1,7 +1,7 @@
 language: generic
 sudo: required
 services:
-    - docker
+    - docker:
 before-install:
     - docker build -t nhukangasniemi/react-test -f ./client/Dockerfile.dev ./client
 
